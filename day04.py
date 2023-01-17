@@ -1,9 +1,19 @@
 #list
-import copy
+
 a = [1,2,[5,9]]
-b = copy.deepcopy(a)
-a[2][1] = 7 #mutable, deepcopy
-print(a, b)
+b = a.copy()
+c = list(a)
+d = a[:]
+a[1] = -77 #immutable
+a[2][1] = 7 #mutable, b/c/d affects
+print(a, b, c, d)
+
+
+# import copy
+# a = [1,2,[5,9]]
+# b = copy.deepcopy(a)
+# a[2][1] = 7 #mutable, deepcopy
+# print(a, b)
 
 
 # a = [1,2,[5,9]]
